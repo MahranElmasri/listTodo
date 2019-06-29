@@ -26,15 +26,15 @@ todoList.addEventListener("click", e => {
 
 const filterTodo = term => {
   Array.from(todoList.children)
-    .filter(item => !item.textContent.includes(term))
+    .filter(item => !item.textContent.toLowerCase().includes(term))
     .forEach(item => item.classList.add("filtered"));
 
   Array.from(todoList.children)
-    .filter(item => item.textContent.includes(term))
+    .filter(item => item.textContent.toLowerCase().includes(term))
     .forEach(item => item.classList.remove("filtered"));
 };
 
 search.addEventListener("keyup", () => {
-  const term = search.value.trim();
+  const term = search.value.trim().toLowerCase();
   filterTodo(term);
 });
