@@ -4,19 +4,28 @@ body {
 .container {
   max-width: 400px;
 }
-input[type="text"],
+
+.todos li {
+  background-color: #423a6f;
+  color: #ccc;
+  border-color: #352f5b;
+}
+
+input[type="text"] {
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #ccc;
+  border: none;
+}
+
 input[type="text"]:foucs {
-  color: #fff;
+  color: #ccc;
   border: none;
   background: rgba(0, 0, 0, 0.2);
   max-width: 400px;
 }
-.todos li{
-    background:#423a6f'
-}
 
 .delete {
   float: right;
-  color: #ccc;
-  cursor:pointer;
+  cursor: pointer;
 }
